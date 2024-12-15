@@ -97,7 +97,7 @@ export default {
 
 <template>
     <div class="container">
-        <h1>DFS Визуализация</h1>
+        <h1>Graph - Depth-First Search Visualization</h1>
         <div class="graph-container">
             <!-- Вершины графа -->
             <div
@@ -131,7 +131,9 @@ export default {
                 />
             </svg>
         </div>
-        <button @click="startDFS">Начать обход</button>
+        <div class="btns-wrapper">
+            <button class="btn" @click="startDFS">Start DFS</button>
+        </div>
     </div>
 </template>
 
@@ -148,7 +150,7 @@ export default {
     margin: 0 auto;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 0.5em;
 }
 
 .node {
@@ -182,5 +184,27 @@ export default {
     width: 100%;
     height: 100%;
     pointer-events: none;
+}
+
+.btns-wrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.75em 1.25em;
+    background-color: rgba(69, 188, 109, 1);
+    color: #161616;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+.btn:hover {
+    background-color: rgba(69, 188, 109, 0.8);
 }
 </style>
